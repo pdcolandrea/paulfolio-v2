@@ -2,6 +2,7 @@ import Header from "@/components/layout/Header";
 import { ThemeProvider } from "../context/theme-provider";
 import "./globals.css";
 import { Archivo } from "next/font/google";
+import Navigator from "@/components/layout/Navigator";
 
 const archivo = Archivo({ weight: "variable", subsets: ["latin"] });
 
@@ -16,14 +17,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body className={archivo.className}>
         <ThemeProvider>
-          <Header />
-          <main>{children}</main>
-          {/* <Footer /> */}
+          <div className="flex flex-col items-center justify-center h-screen ">
+            <div className="flex flex-col h-full py-20 w-[90%] md:w-[40rem] mt-12">
+              <Navigator />
+              <main className="flex md:flex-row md:flex-start flex-col-reverse items-start md:items-center w-full justify-between mb-12 mt-20">
+                {children}
+              </main>
+              {/* <Footer /> */}
+            </div>
+          </div>
         </ThemeProvider>
-        {/* <AppHooks /> */}
       </body>
     </html>
   );

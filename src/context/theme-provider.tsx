@@ -18,7 +18,7 @@ export function ThemeProvider({ children, ...props }: ProviderProps) {
   return (
     <TProvider
       {...props}
-      defaultTheme={"light"}
+      defaultTheme="dark"
       attribute="class"
       enableSystem
       disableTransitionOnChange
