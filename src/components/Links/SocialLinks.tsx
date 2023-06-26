@@ -1,5 +1,9 @@
 import Link from "next/link";
-import { GitHub as FGithub, Linkedin, Twitter } from "react-feather";
+import {
+  GitHub as FGithub,
+  Linkedin as FLinkedin,
+  Twitter as FTwitter,
+} from "react-feather";
 
 const SOCIALS = [
   {
@@ -10,12 +14,12 @@ const SOCIALS = [
   {
     title: "Linkedin",
     href: "https://linkedin.com/pdcolandrea",
-    icon: <Linkedin />,
+    icon: <FLinkedin />,
   },
   {
     title: "Twitter",
     href: "https://twitter.com/the_neanderpaul",
-    icon: <Twitter />,
+    icon: <FTwitter />,
   },
 ];
 
