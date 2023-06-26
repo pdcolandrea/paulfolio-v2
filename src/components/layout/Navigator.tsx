@@ -11,6 +11,7 @@ const navLinks = [
   { id: 4, text: "guest book", href: "/guests" },
 ];
 
+// TODO: can use middleware to remove client directive
 function Navigator() {
   const path = usePathname();
 
