@@ -4,7 +4,7 @@ import TypingAnimation from "@/components/TypingAnimation";
 import SocialLinks from "@/components/links/SocialLinks";
 import Link from "next/link";
 import { Send as FSend } from "react-feather";
-import AboutMe from "@/components/about";
+import AboutMe from "@/components/AboutMe";
 
 export default function Home() {
   return (
