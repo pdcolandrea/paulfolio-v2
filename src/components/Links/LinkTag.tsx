@@ -4,13 +4,14 @@ interface LinkTagProps {
   href: string;
   className?: string;
   children?: React.ReactNode;
+  target?: "_blank" | (string & {});
 }
 
 function LinkTag({ href, className, children }: LinkTagProps) {
   return (
     <Link
       href={href}
-      className={`mr-8 text-gray-600 focus:ring-offset-2 dark:ring-offset-black focus: ring-4 ring-[#f54bff] outline-none dark:text-gray-300 text-sm duration-300 hover:bg-gray-100 dark:hover:bg-gray-800 p-2 rounded-lg ${className}`}
+      className={`font-bold focus:ring-offset-2 dark:ring-offset-black rounded inline-flex items-center w-fit text-accent hover:underline focus:ring-4 ring-accent outline-none duration-30 ${className}`}
     >
       {children}
     </Link>

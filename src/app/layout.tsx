@@ -23,9 +23,7 @@ export default function RootLayout({
           <div className="flex flex-col items-center justify-center h-screen ">
             <div className="flex flex-col h-full py-20 w-[90%] md:w-[40rem] mt-12">
               <Navigator />
-              <main className="flex md:flex-row md:flex-start flex-col-reverse items-start md:items-center w-full justify-between mb-12 mt-20">
-                {children}
-              </main>
+              {children}
               {/* <Footer /> */}
             </div>
           </div>

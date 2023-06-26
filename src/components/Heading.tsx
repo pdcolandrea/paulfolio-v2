@@ -10,3 +10,5 @@ function Heading({ className, children }: HeadingProps) {
     </h1>
   );
 }
+
+export default Heading;

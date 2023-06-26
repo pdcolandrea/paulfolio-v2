@@ -1,5 +1,5 @@
 import Link from "next/link";
-import LinkTag from "../Links/LinkTag";
+import LinkTag from "../links/LinkTag";
 
 const navLinks = [{ id: 1, text: "/", href: "/", dropdown: "Home" }];
 
