@@ -5,6 +5,7 @@ import SocialLinks from "@/components/links/SocialLinks";
 import Link from "next/link";
 import { Send as FSend } from "react-feather";
 import AboutMe from "@/components/AboutMe";
+import ContactMe from "@/components/ContactMe";
 
 export default function Home() {
   return (
@@ -39,6 +40,8 @@ export default function Home() {
       </div>
 
       <AboutMe />
+
+      <ContactMe />
     </>
   );
 }

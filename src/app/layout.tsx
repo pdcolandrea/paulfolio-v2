@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className={archivo.className}>
         {/* <ThemeProvider> */}
-        <div className="flex flex-col items-center justify-center h-screen dark:bg-black bg-white text-black">
+        <div className="flex flex-col items-center justify-center min-h-screen text-black bg-background">
           <div className="flex flex-col h-full py-20 w-[90%] md:w-[40rem] mt-12">
             <Navigator />
             {children}
