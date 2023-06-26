@@ -22,7 +22,6 @@ export default function Home() {
           </Link>
 
           <Heading>
-            {" "}
             Hi, I&apos;m Paul! <span className="wave">👋</span>
           </Heading>
 
