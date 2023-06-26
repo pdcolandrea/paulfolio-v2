@@ -49,7 +49,7 @@ export const about = [
         contribute innovative solutions. If you&#39;re looking for a dedicated
         and versatile software engineer with expertise in Next.js, TypeScript,
         and a love for German Shepherds, feel free to{" "}
-        <LinkTag href="https://pics.notnick.io" target="_blank">
+        <LinkTag href="#" target="_blank">
           get in touch!
         </LinkTag>
       </Text>
@@ -66,7 +66,7 @@ export const about = [
 
         <Text style={{ marginBottom: `${TEXT_MARGIN_BOTTOM}rem` }}>
           View the collection of articles that I&apos;ve found interesting{" "}
-          <LinkTag href="/articles">over here</LinkTag>.
+          <LinkTag href="/blog">over here</LinkTag>.
         </Text>
       </>
     ),
