@@ -19,15 +19,15 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={archivo.className}>
-        <ThemeProvider>
-          <div className="flex flex-col items-center justify-center h-screen ">
-            <div className="flex flex-col h-full py-20 w-[90%] md:w-[40rem] mt-12">
-              <Navigator />
-              {children}
-              {/* <Footer /> */}
-            </div>
+        {/* <ThemeProvider> */}
+        <div className="flex flex-col items-center justify-center h-screen dark:bg-black bg-white">
+          <div className="flex flex-col h-full py-20 w-[90%] md:w-[40rem] mt-12">
+            <Navigator />
+            {children}
+            {/* <Footer /> */}
           </div>
-        </ThemeProvider>
+        </div>
+        {/* </ThemeProvider> */}
       </body>
     </html>
   );

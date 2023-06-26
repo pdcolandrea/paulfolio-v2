@@ -1,5 +1,6 @@
 import Link from "next/link";
 import LinkTag from "../links/LinkTag";
+import Toggle from "../Toggle";
 
 const navLinks = [{ id: 1, text: "/", href: "/", dropdown: "Home" }];
 
@@ -17,7 +18,7 @@ function Navigator() {
         })}
       </div>
 
-      <span>TOGGLE</span>
+      <Toggle />
     </nav>
   );
 }
