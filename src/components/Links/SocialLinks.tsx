@@ -16,7 +16,7 @@ function SocialLinks() {
       {SOCIALS.map((social) => {
         return (
           <Link
-            className="text-2xl duration-300 focus:ring-4 focus:ring-offset-4 dark:ring-offset-black rounded ring-accent outline-none cursor-pointer mr-6 hover:text-black dark:hover:text-white text-gray-600 dark:text-gray-300 hover:scale-110"
+            className="text-2xl duration-300 focus:ring-4 focus:ring-offset-4 dark:ring-offset-black rounded ring-primary outline-none cursor-pointer mr-6 hover:text-black dark:hover:text-white text-gray-600 dark:text-gray-300 hover:scale-110"
             href={social.href}
             key={social.id}
             title={social.title}

@@ -11,7 +11,7 @@ function LinkTag({ href, className, children }: LinkTagProps) {
   return (
     <Link
       href={href}
-      className={`font-bold focus:ring-offset-2 dark:ring-offset-black rounded inline-flex items-center w-fit text-accent hover:underline focus:ring-4 ring-accent outline-none duration-30 ${className}`}
+      className={`font-bold focus:ring-offset-2 dark:ring-offset-black rounded inline-flex items-center w-fit text-primary hover:underline focus:ring-4 ring-primary outline-none duration-30 ${className}`}
     >
       {children}
     </Link>
