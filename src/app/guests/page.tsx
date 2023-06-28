@@ -1,5 +1,3 @@
-"use client";
-
 import Heading from "@/components/Heading";
 import { SigninGithub, SignoutButton } from "@/components/guests/buttons";
 import GuestMessageForm from "@/components/guests/GuestMessageForm";
@@ -11,36 +9,43 @@ import {
   SheetHeader,
   SheetTitle,
 } from "@/components/ui/sheet";
-import { ArrowLeft, GitHub as FGitHub } from "react-feather";
 
-const FAKE_DATA = [
-  {
-    author: "@pdcolandrea",
-    message: "Hello there!",
-  },
-  {
-    author: "@pdcolandrea",
-    message: "How are you!",
-  },
-  {
-    author: "@pdcolandrea",
-    message: "Cooo000000000llsds00ll site!",
-  },
-  {
-    author: "@pdcolandrea",
-    message: "wow!",
-  },
-];
+import { auth } from "@/lib/auth";
+import { getGuestbookMessages } from "../actions";
+
+export const runtime = "edge";
+export const dynamic = "force-dynamic";
 
 export default async function GuestsHome() {
-  let signedIn = false;
+  let messages;
+  let session;
+  try {
+    const [userResp, guestResp] = await Promise.allSettled([
+      auth(),
+      getGuestbookMessages(),
+    ]);
+
+    if (userResp.status === "fulfilled") {
+      session = userResp.value;
+    } else {
+      console.warn(userResp);
+    }
+
+    if (guestResp.status === "fulfilled") {
+      messages = guestResp.value;
+    } else {
+      console.warn(guestResp);
+    }
+  } catch (err) {
+    console.error(err);
+  }
 
   return (
     <>
       <div className="flex flex-col mb-12">
         <Heading>Guest Book📚</Heading>
 
-        {signedIn ? (
+        {session?.user ? (
           <div>
             <GuestMessageForm />
             <SignoutButton />
@@ -50,7 +55,7 @@ export default async function GuestsHome() {
         )}
 
         <div className="mt-12">
-          {FAKE_DATA.map((msg, index) => {
+          {messages?.map((msg, index) => {
             return (
               <div
                 key={`${msg}${index}`}
