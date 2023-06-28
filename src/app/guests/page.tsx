@@ -1,8 +1,9 @@
 "use client";
 
-import Earth from "@/components/Globe";
 import Heading from "@/components/Heading";
-import { Input } from "@/components/ui/input";
+import { SigninGithub, SignoutButton } from "@/components/guests/buttons";
+import GuestMessageForm from "@/components/guests/GuestMessageForm";
+
 import {
   Sheet,
   SheetContent,
@@ -10,7 +11,6 @@ import {
   SheetHeader,
   SheetTitle,
 } from "@/components/ui/sheet";
-import { useState } from "react";
 import { ArrowLeft, GitHub as FGitHub } from "react-feather";
 
 const FAKE_DATA = [
@@ -32,39 +32,21 @@ const FAKE_DATA = [
   },
 ];
 
-export default function GuestsHome() {
-  const [signedIn, setSignedin] = useState(true);
-  const [messageReady, setMessageReady] = useState(false);
+export default async function GuestsHome() {
+  let signedIn = false;
 
   return (
     <>
-      <div className="flex flex-col mb-12 mt-20">
+      <div className="flex flex-col mb-12">
         <Heading>Guest Book📚</Heading>
 
         {signedIn ? (
           <div>
-            <div className="flex flex-row relative items-center">
-              <Input
-                placeholder="Your message..."
-                className="focus:outline-none"
-              />
-              <button className="bg-primary-foreground absolute right-1 top-1 items-center justify-center px-4 py-1 h-8 rounded">
-                <span className="text-xs">Post</span>
-              </button>
-            </div>
-
-            <span className="flex-row flex text-xs mt-2 hover:border-b duration-150 animate-in border-primary w-fit">
-              <ArrowLeft size={14} />
-              <p>Sign Out</p>
-            </span>
+            <GuestMessageForm />
+            <SignoutButton />
           </div>
         ) : (
-          <button>
-            <span className="flex flex-row justify-center items-center bg-black border border-white font-semibold w-fit px-4 py-2 rounded-lg">
-              <FGitHub className="mr-4" />
-              Sign in with Github
-            </span>
-          </button>
+          <SigninGithub />
         )}
 
         <div className="mt-12">
@@ -85,7 +67,7 @@ export default function GuestsHome() {
         </div>
       </div>
 
-      <Sheet open={messageReady}>
+      {/* <Sheet open={false}>
         <SheetContent side="bottom" className="flex-row flex">
           <SheetHeader>
             <SheetTitle>Care to share your location?</SheetTitle>
@@ -97,7 +79,7 @@ export default function GuestsHome() {
 
           <Earth />
         </SheetContent>
-      </Sheet>
+      </Sheet> */}
     </>
   );
 }
