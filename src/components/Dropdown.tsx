@@ -31,9 +31,11 @@ function Dropdown({ items }: DropdownProps) {
           <DropdownMenuLabel>Navigation</DropdownMenuLabel>
           <DropdownMenuSeparator />
 
-          {items.map((link) => {
+          {items.map((link, index) => {
             return (
-              <DropdownMenuItem key={link.title}>{link.text}</DropdownMenuItem>
+              <DropdownMenuItem key={`${index}${link.href}`}>
+                {link.text}
+              </DropdownMenuItem>
             );
           })}
         </DropdownMenuContent>

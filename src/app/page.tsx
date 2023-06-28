@@ -23,12 +23,14 @@ export default function Home() {
           </Link>
 
           <Heading>
-            Hi, I&apos;m Paul! <span className="wave">👋</span>
+            Hi, I&apos;m Paul! <span>👋</span>
           </Heading>
 
           <div className="text-gray-700 flex font-semibold dark:text-gray-100 mb-4">
             {new Date().getFullYear() - 1998} y/o&nbsp;
-            <TypingAnimation words={["Software Engineer", "iOS Engineer"]} />
+            <TypingAnimation
+              words={["Software Engineer", "Mobile Developer", "Dog Dad"]}
+            />
           </div>
 
           <SocialLinks />
