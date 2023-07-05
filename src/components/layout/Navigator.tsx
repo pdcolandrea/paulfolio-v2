@@ -5,10 +5,10 @@ import Toggle from "../Toggle";
 import { usePathname } from "next/navigation";
 
 const navLinks = [
-  { id: 1, text: "/", href: "/" },
-  { id: 2, text: "projects", href: "/projects" },
-  { id: 3, text: "blog", href: "/blog" },
-  { id: 4, text: "guest book", href: "/guests" },
+  { id: 1, text: "home", href: "/" },
+  // { id: 2, text: "projects", href: "/projects" },
+  // { id: 3, text: "blog", href: "/blog" },
+  // { id: 4, text: "guest book", href: "/guests" },
 ];
 
 // TODO: can use middleware to remove client directive
