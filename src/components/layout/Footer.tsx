@@ -12,7 +12,7 @@ function Footer() {
         </p>
         <div className="flex items-center text-xs opacity-30 text-gray-500">
           <p>Built with ❤️ by</p>
-          <FooterLink link="">Paul Colandrea</FooterLink>
+          <FooterLink link="#">Paul Colandrea</FooterLink>
         </div>
       </div>
     </footer>
